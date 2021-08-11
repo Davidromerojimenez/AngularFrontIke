@@ -1,0 +1,31 @@
+<div *ngIf="data.spinner; else alertDialog">
+    <mat-spinner [diameter]="50" style="margin: 0 auto 15px auto;"></mat-spinner>
+    <span>{{ data.message }}</span>
+</div>
+<ng-template #alertDialog>
+    <div>
+        <mat-dialog-content>
+            <h1 mat-dialog-title>
+                <div *ngIf="data.status === 'success'">
+                    <fa-icon icon="check" [ngStyle]="{ color: 'green' }"></fa-icon>
+                    {{ data.title }}
+                    <p>{{ data.message }}</p>
+                </div>
+                <div *ngIf="data.status === 'error'">
+                    <fa-icon icon="times" [ngStyle]="{ color: 'red' }"></fa-icon>
+                    {{ data.title }}
+                    <p>{{ data.message }}</p>
+                </div>
+                <div *ngIf="data.status === 'info'">
+                    <fa-icon icon="info" [ngStyle]="{ color: 'blue' }"></fa-icon>
+                    {{ data.title }}
+                    <p>{{ data.message }}</p>
+                </div>
+            </h1>
+        </mat-dialog-content>
+        <mat-dialog-actions *ngIf="!data.spinner">
+            <button mat-button (click)="cerrar()" mat-dialog-close
+                class="float-right">Cerrar</button>
+        </mat-dialog-actions>
+    </div>
+</ng-template>

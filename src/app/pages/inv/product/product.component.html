@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      {{ product.name }}
+    </mat-card-title>
+    Disponibles: {{ product.inventario_stock }}
+  </mat-card-header>
+
+  <mat-card-actions>
+
+    <button mat-flat-button color="primary" (click)="onClick()"
+      [disabled]="product.inventario_stock === 0">Agregar al carrito
+      {{product.price | currency}}
+      <mat-icon>add_shopping_cart</mat-icon></button>
+  </mat-card-actions>
+
+</mat-card>

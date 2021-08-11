@@ -1,0 +1,28 @@
+
+
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+
+    <h1>CRM Inventario</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="['/products']"> Comprar Productos </a>
+      <a mat-button [routerLink]="'/add-inv'"> Agregar Inventario </a>
+    </div>
+
+    <span class="spacer"></span>
+
+    <ng-container *ngIf='!authService.loggedIn(); else loggedIn'>
+      <a mat-button [routerLink]="'/signup'"> Registro </a>
+      <a mat-button [routerLink]="'/signin'"> Login </a>
+    </ng-container>
+    <ng-template #loggedIn>
+      <a mat-button (click)="authService.logout()"> Salir </a>
+    </ng-template>
+
+    <app-cart class="mousehover" (click)="goToCheckout()"></app-cart>
+  </mat-toolbar-row>
+
+
+</mat-toolbar>

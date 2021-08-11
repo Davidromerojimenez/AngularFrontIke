@@ -1,0 +1,29 @@
+<div class="container__table">
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Qty</th>
+        <th>Inventario</th>
+        <th>Precio Unitario</th>
+        <th>Sub total</th>
+      </tr>
+    </thead>
+
+
+    <tr *ngFor="let item of cart$ | async">
+      <td>{{item.name}}</td>
+      <td>{{item.qty}}</td>
+      <td>{{item.inventario_stock + 1}}</td>
+      <td>{{item.price | currency}}</td>
+      <td>{{item.price * item.qty | currency}}</td>
+    </tr>
+
+  </table>
+
+  <div class="container__total">
+    <p class="total">
+      <strong>Total: <span>{{ total$ | async | currency}}</span></strong>
+    </p>
+  </div>
+</div>

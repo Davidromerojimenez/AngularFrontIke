@@ -9,6 +9,11 @@
       "jasmine",
       "jasminewd2",
       "node"
-    ]
+    ],
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true
   }
 }

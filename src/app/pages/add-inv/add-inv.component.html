@@ -1,0 +1,81 @@
+<h1>Agregar Inventario</h1>
+<div class="container">
+  <form class="form item" #inventarioForm="ngForm">
+
+    <mat-form-field class="form__element">
+      <input type="text"
+        matInput
+        placeholder="Nombre del Producto"
+        required
+        [(ngModel)]="product.name"
+        name="nombre"
+        #nombre="ngModel">
+      <mat-error *ngIf="nombre.valid || nombre.pristine">
+        El nombre es requerido
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field class="form__element">
+      <input type="text"
+        matInput
+        placeholder="Cantidad"
+        required
+        [(ngModel)]="product.inventario_stock"
+        name="cantidad"
+        #cantidad="ngModel">
+      <mat-error *ngIf="cantidad.valid || cantidad.pristine">
+        La cantidad es requerida
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form__element">
+      <input type="text"
+        matInput
+        placeholder="Precio"
+        required
+        [(ngModel)]="product.price"
+        name="precio"
+        #precio="ngModel">
+      <mat-error *ngIf="precio.valid || precio.pristine">
+        El precio es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form__element">
+      <input type="text"
+        matInput
+        placeholder="# lote"
+        [(ngModel)]="product.lote"
+        name="lote"
+        #lote="ngModel">
+
+    </mat-form-field>
+
+    <mat-form-field class="form__element">
+      <input type="text"
+        matInput
+        placeholder="Fecha Vencimiento"
+        [(ngModel)]="product.date_venc"
+        name="fechaVencimiento"
+        #fechaVencimiento="ngModel">
+
+    </mat-form-field>
+
+
+
+
+  </form>
+</div>
+
+
+<div class="container__button">
+  <button
+    [disabled]="!inventarioForm.form.valid"
+    mat-raised-button
+    color="primary"
+    type="submit"
+    (click)='onSubmit()'>
+    Agregar
+  </button>
+</div>
