@@ -16,7 +16,6 @@ import { ShoppingCartService } from 'src/app/shared/services/shopping-cart.servi
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-
   products: Product[];
 
   constructor(private productSvc: InvService, private shoppingCartSvc: ShoppingCartService) { }

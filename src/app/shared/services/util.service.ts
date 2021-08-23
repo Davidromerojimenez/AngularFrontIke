@@ -27,7 +27,6 @@ export class UtilService {
     stop(ref: MatDialogRef<SpinnerViewComponent>) {
         ref.close();
     }
-
     openDialog(content: any): MatDialogRef<SpinnerViewComponent> {
         const alert_dialog = this.dialog.open(SpinnerViewComponent, {
             data: {

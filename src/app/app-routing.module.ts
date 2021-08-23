@@ -5,6 +5,7 @@ import { SigninComponent } from './shared/components/signin/signin.component';
 import{AuthGuard} from './auth.guard';
 import {AddInvComponent} from './pages/add-inv/add-inv.component';
 
+
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'signin', component: SigninComponent },

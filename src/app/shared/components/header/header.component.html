@@ -10,7 +10,6 @@
       <a mat-button [routerLink]="['/products']"> Comprar Productos </a>
       <a mat-button [routerLink]="'/add-inv'"> Agregar Inventario </a>
     </div>
-
     <span class="spacer"></span>
 
     <ng-container *ngIf='!authService.loggedIn(); else loggedIn'>

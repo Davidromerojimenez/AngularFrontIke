@@ -14,7 +14,6 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   onClick(): void {
     this.product.inventario_stock -= 1;
     this.addToCartClick.emit(this.product);

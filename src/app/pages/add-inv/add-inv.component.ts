@@ -15,6 +15,7 @@ export class AddInvComponent implements OnInit {
 
 
 
+
   product = {
     name: '',
     price: '',

@@ -15,6 +15,7 @@ import { AddInvComponent } from './pages/add-inv/add-inv.component';
 import{AuthGuard} from './auth.guard';
 import {TokenInterceptorService} from './shared/services/token-interceptor.service';
 
+
 import { SpinnerViewComponent } from './shared/components/spinner-view/spinner-view.component';
 import { UtilService } from './shared/services/util.service';
 

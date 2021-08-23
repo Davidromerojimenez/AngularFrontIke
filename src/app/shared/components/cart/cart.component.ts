@@ -14,7 +14,6 @@ import { Component } from '@angular/core';
   </ng-container>
   `
 })
-
 export class CartComponent {
   quantity$ = this.shoppingCartSvc.quantityAction$;
   total$ = this.shoppingCartSvc.totalAction$;

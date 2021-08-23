@@ -12,7 +12,6 @@ export interface Order {
   pickup: boolean;
   id: number;
 }
-
 export interface DetailsOrder {
   details: Details[];
   orderId: number;

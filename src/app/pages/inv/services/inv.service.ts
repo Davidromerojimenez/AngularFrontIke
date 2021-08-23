@@ -13,7 +13,6 @@ export class InvService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl + '/products');
   }
-
   addProduct(prod): Observable<Product[]> {
     return this.http.post<Product[]>(this.apiUrl + '/crear_producto', prod);
   }

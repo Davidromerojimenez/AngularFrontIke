@@ -16,7 +16,6 @@ export class ShoppingCartService {
   get totalAction$(): Observable<number> {
     return this.totalSubject.asObservable();
   }
-
   get cartAction$(): Observable<Product[]> {
     return this.cartSubject.asObservable();
   }

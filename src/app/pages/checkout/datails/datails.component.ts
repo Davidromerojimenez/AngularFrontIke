@@ -16,7 +16,6 @@ export class DatailsComponent implements OnInit {
   //prod = cart$;
 
 
-
   constructor(private shoppingCartSvc: ShoppingCartService) { }
 
   ngOnInit(): void {

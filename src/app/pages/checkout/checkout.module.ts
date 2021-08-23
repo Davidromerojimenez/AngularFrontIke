@@ -17,4 +17,5 @@ import { DatailsComponent } from './datails/datails.component';
     MaterialModule
   ]
 })
+
 export class CheckoutModule { }
